@@ -89,13 +89,13 @@ while not exitgame:
         food_x = r.randint(0,screen_width)
         food_y = r.randint(0,screen_height1)
         
-        c += 20;
+        c += 20
         
     gamewindow.fill(white)
     text_screen("sNaKe GaMe","score: " + str(score),green,red,10,5,400,5)
     pg.draw.rect(gamewindow1, black, [snake_x,snake_y,snake_size, 10])
     pg.draw.rect(gamewindow1, black, [food_x,food_y,10,10])
-    plot_snake(gamewindow1,black,snk_list,snake_size)
+    #plot_snake(gamewindow1,black,snk_list,snake_size)
 
     pg.display.update()
     clock.tick(fps)
