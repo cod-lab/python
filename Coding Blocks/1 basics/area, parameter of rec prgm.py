@@ -1,0 +1,5 @@
+print("enter l & b of rec")
+l=int(input())
+b=int(input())
+print("area of rec is {}".format(l*b))
+print("perimeter of rec is {}".format(2*(l+b)))

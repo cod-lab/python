@@ -1,0 +1,3 @@
+2 random generators numpy
+3 statistical computation using numpy
+4 std deviation in a running stream
