@@ -105,8 +105,8 @@ def gameloop():
                 elif velocity_y == -speed:
                     pg.K_DOWN = False
                 else:
-                    pg.K_UP = False            
-            
+                    pg.K_UP = False
+                                
             #snake movement
             snake_x += velocity_x
             snake_y += velocity_y

@@ -96,20 +96,20 @@ def gameloop():
                         velocity_y = speed
                         #event.key != pg.K_UP
             
-            for event in pg.event.get():
-                #if event.type == pg.KEYDOWN:
-                if velocity_x == speed:
-                    pg.K_LEFT = False 
-                elif velocity_x == -speed:
-                    pg.K_RIGHT = False
-                elif velocity_y == -speed:
-                    pg.K_DOWN = False
-                else:
-                    pg.K_UP = False            
-            
             #snake movement
             snake_x += velocity_x
             snake_y += velocity_y
+            
+            for event in pg.event.get():
+                #if event.type == pg.KEYDOWN:
+                if velocity_x == speed:
+                    event.key != pg.K_LEFT
+                elif velocity_x == -speed:
+                    event.key != pg.K_RIGHT
+                elif velocity_y == -speed:
+                    event.key != pg.K_DOWN
+                else:
+                    event.key != pg.K_UP
                 
             #collision or eating food
             #c = 10

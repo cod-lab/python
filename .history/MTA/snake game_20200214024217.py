@@ -74,7 +74,18 @@ def gameloop():
                 if event.type == pg.KEYDOWN:
                     if event.key == pg.K_RETURN:
                         gameloop()
-        else:    
+        else:
+            for event in pg.event.get():
+                #if event.type == pg.KEYDOWN:
+                if velocity_x == speed:
+                    pg.K_LEFT = False 
+                elif velocity_x == -speed:
+                    pg.K_RIGHT = False
+                elif velocity_y == -speed:
+                    pg.K_DOWN = False
+                else:
+                    pg.K_UP = False
+                                
             for event in pg.event.get():
                 if event.type == pg.QUIT:
                     exitgame = True
@@ -95,17 +106,6 @@ def gameloop():
                         velocity_x = 0
                         velocity_y = speed
                         #event.key != pg.K_UP
-            
-            for event in pg.event.get():
-                #if event.type == pg.KEYDOWN:
-                if velocity_x == speed:
-                    pg.K_LEFT = False 
-                elif velocity_x == -speed:
-                    pg.K_RIGHT = False
-                elif velocity_y == -speed:
-                    pg.K_DOWN = False
-                else:
-                    pg.K_UP = False            
             
             #snake movement
             snake_x += velocity_x
