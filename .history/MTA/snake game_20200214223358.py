@@ -64,7 +64,7 @@ def gameloop():
     snake_list = []
 
     #game loop
-    while exitgame != True:
+    while exitgame == False:            # or while exitgame != True: or while not exitgame:
         if gameover == True:
             boxwindow.fill(grey)
             text_screen("GAME OVER!","press ENTER to play again...",blue,yellow,250,160,230,200)
@@ -74,7 +74,7 @@ def gameloop():
                 if event.type == pg.KEYDOWN:
                     if event.key == pg.K_RETURN:
                         gameloop()
-        else:    
+        else:
             for event in pg.event.get():
                 if event.type == pg.QUIT:
                     exitgame = True
@@ -96,17 +96,28 @@ def gameloop():
                         velocity_y = speed
                         #event.key != pg.K_UP
             
-            for event in pg.event.get():
+            while event.key == pg.K_RIGHT:
+                event.key != pg.K_LEFT
+            while event.key == pg.K_LEFT:
+                event.key != pg.K_RIGHT
+            while event.key == pg.K_UP:
+                event.key != pg.K_DOWN
+            while event.key == pg.K_DOWN:
+                event.key != pg.K_UP
+                
+            ''' for event in pg.event.get():
                 #if event.type == pg.KEYDOWN:
-                if velocity_x == speed:
+                if pg.key.get_pressed()[pg.K_RIGHT] == True:
                     pg.K_LEFT = False 
                 elif velocity_x == -speed:
                     pg.K_RIGHT = False
                 elif velocity_y == -speed:
                     pg.K_DOWN = False
                 else:
-                    pg.K_UP = False            
-            
+                    pg.K_UP = False '''
+                
+                #pg.key.get_mods()
+
             #snake movement
             snake_x += velocity_x
             snake_y += velocity_y
@@ -140,7 +151,7 @@ def gameloop():
                 if abs(x[1] - snake_head[1])<5 and abs(x[2] - snake_head[2])<5:
                     exitgame = True '''
             
-            if (snake_head in snake_list[:-1]) or (snake_x or snake_y)<0 or (snake_x>box_width) or (snake_y>box_height):     #list[-1]or[:-1] -> starting from last item
+            if (snake_head in snake_list[:-1]) or (snake_x<0) or (snake_y<0) or (snake_x>box_width) or (snake_y>box_height):     #list[-1]or[:-1] -> starting from last item
                 gameover = True
             
             snake(boxwindow,black,snake_list,snake_size)

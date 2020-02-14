@@ -64,7 +64,7 @@ def gameloop():
     snake_list = []
 
     #game loop
-    while exitgame != True:
+    while exitgame == False:            # or while exitgame != True: or while not exitgame:
         if gameover == True:
             boxwindow.fill(grey)
             text_screen("GAME OVER!","press ENTER to play again...",blue,yellow,250,160,230,200)
@@ -105,8 +105,8 @@ def gameloop():
                 elif velocity_y == -speed:
                     pg.K_DOWN = False
                 else:
-                    pg.K_UP = False            
-            
+                    pg.K_UP = False
+
             #snake movement
             snake_x += velocity_x
             snake_y += velocity_y

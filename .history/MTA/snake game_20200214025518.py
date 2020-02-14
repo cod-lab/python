@@ -64,7 +64,7 @@ def gameloop():
     snake_list = []
 
     #game loop
-    while exitgame != True:
+    while exitgame == False:
         if gameover == True:
             boxwindow.fill(grey)
             text_screen("GAME OVER!","press ENTER to play again...",blue,yellow,250,160,230,200)
