@@ -1,0 +1,2 @@
+a="jbikbb"
+split(a)
