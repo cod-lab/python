@@ -25,13 +25,13 @@ print(b.intersection(a))                        #common in a, b is printed
 #difference
 print(b.difference(a))                          #delete elements of a present in b and print remaining b
 
-#or
+#or/union
 print(b|a)                                      #or/union
 
-#and
+#and/intersection
 print(b&a)                                      #and/common
 
-#minus
+#minus/difference
 print(b-a)
 print(a-b)
 
@@ -49,7 +49,7 @@ else:
     print('nopes')
 
 '''
-
+#Symmetric difference (^)
 x={1,2,3,6,54}
 y={2,6,54,98,7,8}
 print(x^y)                                      #uncommon elements only, print elements present only in any one set not in both

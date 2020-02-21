@@ -1,4 +1,4 @@
-#iterable - like operand, dataset from which elements are taken one by one for processing
+#iterable - like operand
 #iterator - like operator
 #iteration - like operator working on operand, like fn of operator
 '''

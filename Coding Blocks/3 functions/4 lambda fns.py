@@ -8,6 +8,7 @@ add=6,9                                 #variable...not fn...independent from fn
 print(add)                              #print value of add, accessing variable not fn
 
 syntax --> variable = lambda arg1,arg2,arg3... : definition
+
 add=lambda a,b:print(a+b)               #lambda fn will only hv 1 line in its body
 add(2,5)                                #print value of add
 print(add)                              #print err
