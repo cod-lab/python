@@ -3,11 +3,11 @@ import json
 class person():
     country = "india"
 
-    def __init__(self,name,college,age,rollno):                             #constructor
-        self.name = name                                                    #name, college (on RHS) r object(instance) variables
+    def __init__(self,name,college,age,rollno):                                 #constructor
+        self.name = name                                                        #name, college (on RHS) r object(instance) variables
         self.college = college
         print("my name is",self.name,"& my college is",self.college)        #self.'name', self.'college' r cls variables with no predfined value
-        print("my age is",age,"& my rollno. is",rollno,"\n")                #age, rollno r object(instance) variables
+        print("my age is",age,"& my rollno. is",rollno,"\n")                    #age, rollno r object(instance) variables
         
     def fn1(self,msg):
         print(msg,"\nI'm from",self.country)                                #self.'country' is an object(instance) variable with predfined value
