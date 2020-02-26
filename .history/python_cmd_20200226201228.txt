@@ -1,0 +1,5 @@
+python -m pip install --user --upgrade pip
+
+python -m pip install --user <package name>
+
+locate packages on machine = python -m site
